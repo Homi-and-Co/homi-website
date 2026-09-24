@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homi &amp; Co. Client Portal, Demo</title>
+<meta name="description" content="Demonstration of the Homi & Co. client and director portal. Illustrative data only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ LOGIN ============ -->
+<div id="login">
+  <div class="demo-band">Demonstration environment &middot; Illustrative data only</div>
+  <div class="login-wrap">
+    <div class="login-card">
+      <img class="logo" src="assets/homi-logo-black.png" alt="Homi &amp; Co. logo">
+      <div class="tagline">Rooted in tradition. Built for growth.</div>
+      <p class="desc">This is a guided demonstration of the Homi &amp; Co. client portal and the internal director view. Every number on every screen is fictional and illustrative. No real client data appears anywhere in this demo.</p>
+      <button class="btn" id="viewDemo">View demo</button>
+      <div class="login-tenant">
+        <span class="small" style="display:block;margin-bottom:0.5rem">Demo only: choose which client portal to preview. In production each client logs in and sees only their own business.</span>
+        <div class="login-tenant-btns">
+          <button class="tenant-btn active" data-tenant="harvest">Harvest Martial Arts</button>
+          <button class="tenant-btn" data-tenant="private">Private Instruction</button>
+          <button class="tenant-btn" data-tenant="hanmudo">World Han Mu Do Association</button>
+          <button class="tenant-btn" data-tenant="homi">Homi &amp; Co.</button>
+          <button class="tenant-btn" data-tenant="pond">The Pond</button>
+        </div>
+      </div>
+      <div class="login-foot">
+        <span class="demo-chip">Demo login, no credentials needed</span>
+        <p class="small" style="margin-top:1rem">Client logins see exactly one tenant.<br>Switch to the Director role inside to see the internal rollup.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ APP ============ -->
+<div id="app" class="app">
+  <div class="demo-band">Demonstration environment &middot; Illustrative data only</div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <img class="logo" src="assets/homi-logo-black.png" alt="Homi &amp; Co. logo">
+      <span class="portal-name">Client Portal</span>
+      <div class="role-toggle" role="tablist" aria-label="Role">
+        <button id="roleClient" class="active">Client</button>
+        <button id="roleDirector">Director</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav id="sidenav" class="sidenav" aria-label="Portal sections"></nav>
+    <main id="main" class="main"></main>
+  </div>
+
+  <div id="contextLine" style="display:none"></div>
+  <div id="toast" class="hidden" style="position:fixed;bottom:1.4rem;left:50%;transform:translateX(-50%);background:var(--ink);color:#f4efe4;padding:0.7rem 1.3rem;border-radius:8px;font-size:0.9rem;z-index:50;box-shadow:var(--shadow)"></div>
+
+  <footer class="footer-note">
+    Homi &amp; Co. demonstration portal. All data on this page is illustrative and fictional.<br>
+    In the live portal, client logins are limited to their own tenant and every view is audit logged.
+  </footer>
+</div>
+
+<script src="js/data-harvest.js"></script>
+<script src="js/data-private.js"></script>
+<script src="js/data-hanmudo.js"></script>
+<script src="js/data-homi.js"></script>
+<script src="js/data-pond.js"></script>
+<script src="js/data-director.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
